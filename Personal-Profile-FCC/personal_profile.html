@@ -2,5 +2,258 @@
 <html>
 <head>
   <meta charset=utf-8>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0D0221;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    #navbar {
+      background-color: #32746D;
+      width: 100%;
+      height: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    .nav-list {
+      display: flex;
+      flex-direction: row;
+      padding-right: 60px;
+      justify-content: flex-end;
+      align-items: center;
+      list-style-type: none;
+    }
+    .nav-link {
+      font-weight: 400;
+      margin-left: 25px;
+    }
+    .nav-link:link, .nav-link:visited {
+      color: #F5E663;
+      text-decoration: none;
+    }
+    .nav-link:hover, .nav-link:active {
+      color: #FFAD69;
+    }
+
+    section::before {
+      display: block;
+      content: " ";
+      margin-top: -100px;
+      height: 100px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #welcome-section {
+      background-image: url(https://i.ibb.co/4jcYDSH/Watercolors-25-copy-1.png);
+      width: 100%;
+      height: 115vh;
+    }
+    #welcome-text {
+      color: #0D0221;
+      height: 60vh;
+      font-family: "Damion", serif;
+      text-align: center;
+      font-size: 3rem;
+    }
+    h1 {
+      font-size: 8rem;
+    }
+
+    section {
+      border-bottom: 1px solid #FFAD69;
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+    #about-section {
+      display: flex;
+      flex-flow: row wrap;
+      padding-top: 120px;
+      color: #49aba2;
+      height: 100vh;
+      width: 90%;
+      margin: auto;
+    }
+    #about-text {
+      float: right;
+      width: 70%;
+      align-items: baseline;
+      padding-top: 50px;
+    }
+    .section-heading {
+      font-family: "Damion", serif;
+      font-size: 3rem;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 30px;
+      width: 20%;
+      color: #F5E663;
+      padding-top: 50px;
+    }
+    .projects-grid {
+      display: flex;
+      flex-flow: row wrap;
+      width: 80%;
+      margin: auto;
+      justify-content: space-between;
+    }
+    .project-tile {
+      flex: 0 0 400px;
+      margin-bottom: 40px;
+      padding: 30px;
+      width: 400px;
+      height: 300px;
+      background-color: #104F55;
+      text-align: center;
+    }
+    a img {
+      width: 400px;
+      height: auto;
+    }
+
+    a:link, a:visited {
+      color: #F5E663;
+      text-decoration: none;
+    }
+
+    a:hover, a:active {
+      color: #FFAD69;
+
+    }
+    .icon {
+      width: 24px;
+      height: auto;
+    }
+    #contacts-section {
+      height: 100vh;
+    }
+
+    #email-div {
+      color: #FFAD69;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    #icon-links {
+      display: flex;
+      flex-direction: row;
+      width: 30%;
+      margin: auto;
+      justify-content: space-between;
+    }
+
+    @media screen only and (max-width: 768px) {
+      
+    }
+  </style>
 </head>
+<body>
+
+<!-- START NAV -->
+  <nav id="navbar">
+    <ul class="nav-list">
+      <li>
+        <a class="nav-link" href="#welcome-section">Welcome</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#about-section">About Me</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#projects">My Projects</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#contacts-section">Contact</a>
+      </li>
+    </ul>
+  </nav>
+<!-- END NAV -->
+
+<!-- START WELCOME SECTION -->
+  <section id="welcome-section">
+    <div id="welcome-text">
+      <h1>Welcome!</h1>
+      <h3>My name is Anne Burke.</h3>
+    </div>
+  </section>
+<!-- END WELCOME SECTION -->
+
+<!-- START ABOUT SECTION -->
+  <section id="about-section">
+    <h3 class="section-heading">About</h3>
+    <p id="about-text">
+      I am learning HTML, CSS, and JavaScript. This website is one of my practice projects. You can see the others in My Projects.<br /><br />For the last eight years I have been studying and teaching Slavic languages and literatures. <br /><br />I am hoping to transition out of academia and into the field of instructional design. This was my motivation for learning to code.
+    </p>
+  </section>
+<!-- END ABOUT SECTION-->
+
+<!-- START PROJECTS SECTION -->
+  <section id="projects">
+    <h3 class="section-heading">My Projects</h3>
+    <div class="projects-grid">
+      <a href="https://codepen.io/annecburke/full/XWNBVWG" target="_blank">
+        <div class="project-tile">
+        <img src="https://i.ibb.co/NY92YMr/Screen-Shot-2021-03-16-at-3-26-02-PM.png" id="tribute-page-img" class="project-image" alt="Tribute Page Image"/>
+        <p class="project-title">Tribute Page: Ludwig Zamenhof
+        </p>
+      </div>
+      </a>
+
+      <a href="https://codepen.io/annecburke/full/xxRyzwG" target="_blank">
+        <div class="project-tile">
+          <img src="https://i.ibb.co/FzjKyqT/Screen-Shot-2021-03-16-at-3-26-53-PM.png" id="survey-page-img" class="project-image" alt="Survey Page Image"/>
+          <p class="project-title">Survey Page
+          </p>
+        </div>
+      </a>
+
+      <a href="https://codepen.io/annecburke/full/yLVQMop" target="_blank">
+        <div class="project-tile">
+          <img src="https://i.ibb.co/T2sBwcN/Screen-Shot-2021-03-16-at-3-27-18-PM.png" id="product-landing-img" class="project-image" alt="Product Landing Page Image"/>
+          <p class="project-title">Project Landing Page
+          </p>
+        </div>
+      </a>
+
+      <a href="https://codepen.io/annecburke/full/eYBXYPN" target="_blank">
+        <div class="project-tile">
+          <img src="https://i.ibb.co/Rvq48GY/Screen-Shot-2021-03-16-at-3-27-45-PM.png" id="tech-doc-img" class="project-image" alt="Technical Documentation Page Image"/>
+          <p class="project-title">Technical Documentation Page
+          </p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+<!-- END PROJECTS SECTION -->
+
+<!-- START CONTACT SECTION -->
+  <section id="contacts-section">
+    <h3 class="section-heading">Contact</h3>
+    <div id=email-div>
+      <p>
+        annechristineburke@gmail.com
+      </p>
+    </div>
+    <div id="icon-links">
+      <a href="https://github.com/annecburke"><img class="icon" src="https://i.ibb.co/yQMtFNy/icons8-github-24.png" id="github-icon" alt="GitHub Icon" /></a>
+
+      <a href="https://linkedin.com/anne-c-burke"><img class="icon" src="https://i.ibb.co/k96zXq9/icons8-linkedin-24.png" /></a>
+
+      <a href="https://twitter.com/christeza"><img class="icon" src="https://i.ibb.co/vq1zr7n/icons8-twitter-24.png" /></a>
+    </div>
+  </section>
+<!-- END CONTACT SECTION -->
+</body>
 </html>
