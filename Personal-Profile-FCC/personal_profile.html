@@ -10,159 +10,482 @@
     body {
       background-color: #0D0221;
       font-family: "Montserrat", sans-serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: 1.4;
+      color: #f5e663;
     }
     #navbar {
-      background-color: #32746D;
-      width: 100%;
-      height: 50px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding: 20px;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
+    position: fixed;
+    background-color: #32746D;
+    width: 100%;
+    top: 0;
+    left: 0;
     }
-    .nav-list {
-      display: flex;
-      flex-direction: row;
-      padding-right: 60px;
-      justify-content: flex-end;
-      align-items: center;
-      list-style-type: none;
-    }
-    .nav-link {
-      font-weight: 400;
-      margin-left: 25px;
-    }
-    .nav-link:link, .nav-link:visited {
-      color: #F5E663;
-      text-decoration: none;
-    }
-    .nav-link:hover, .nav-link:active {
-      color: #FFAD69;
+    a:link, a:visited {
+        text-decoration: none;
+        color: #F5E663;
+        font-weight: 400;
     }
 
+    a:hover, a:active {
+        color: #FFAD69;
+    }
+    #welcome-section {
+      background-image: url(https://i.ibb.co/4jcYDSH/Watercolors-25-copy-1.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+    }
+    #welcome-text {
+    font-family: "Damion", serif;
+    }
+
+    .section-heading {
+    color: #FFAD69;
+    font-family: "Damion", serif;
+    }
+
+    /*--START OF PHONE STYLES--*/
+    @media screen and (max-width: 479px) {
+    body {
+      font-size: 14px;
+    }
+    /*--FOR TOGGLE MENU--*/
+    #navbar {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          height: 50px;
+    }
+    .nav-list {
+      display: none;
+      max-height: 0px;
+      overflow: hidden;
+      background-color: #68C1AC;
+      width: 50px;
+    }
+
+    .dropdown-menu {
+      flex-direction: row-reverse;
+      width: auto;
+      padding: 5px 30px;
+    }
+
+    .dropdown-menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px;
+    }
+    .dropdown-menu label {
+      font-weight: 700;
+      color: #F5E663;
+      display: block;
+      cursor: pointer;
+      background: url(https://i.ibb.co/J7tHfns/icons8-menu-24.png) no-repeat center left;
+      padding: 13px 0 10px 30px;
+    }
+    input#menu-toggle {
+        display: none;
+    }
+    input:checked + label {
+      background: url(https://i.ibb.co/fHXz9c6/icons8-cancel-26.png) no-repeat left center;
+      padding: 13px 0 10px 30px;
+    }
+    input:checked ~ .nav-list {
+      display: block;
+      max-height: 300px;
+      width: 100px;
+      overflow: visible;
+    }
+    /*--WELCOME SECTION--*/
     section::before {
       display: block;
-      content: " ";
+      content: "";
       margin-top: -100px;
       height: 100px;
       visibility: hidden;
       pointer-events: none;
     }
     #welcome-section {
-      background-image: url(https://i.ibb.co/4jcYDSH/Watercolors-25-copy-1.png);
-      width: 100%;
-      height: 115vh;
-    }
-    #welcome-text {
-      color: #0D0221;
-      height: 60vh;
-      font-family: "Damion", serif;
+      padding-top: 80px;
       text-align: center;
-      font-size: 3rem;
     }
-    h1 {
-      font-size: 8rem;
+    #welcome-text h1{
+      width: 90%;
+      font-size: 3em;
+    }
+    #welcome-text h3 {
+      width: 90%;
+      font-size: 2em;
+    }
+    /*--END WELCOME SECTION--*/
+
+     .section-heading {
+      font-size: 2em;
+      padding-left: 20px;
     }
 
     section {
-      border-bottom: 1px solid #FFAD69;
-      margin-top: 20px;
-      padding-bottom: 20px;
-    }
-    #about-section {
-      display: flex;
-      flex-flow: row wrap;
-      padding-top: 120px;
-      color: #49aba2;
+      padding-top: 30px;
+      width: 100%;
       height: 100vh;
-      width: 90%;
-      margin: auto;
     }
+    /*--BEGIN ABOUT SECTION --*/
     #about-text {
-      float: right;
-      width: 70%;
-      align-items: baseline;
-      padding-top: 50px;
-    }
-    .section-heading {
-      font-family: "Damion", serif;
-      font-size: 3rem;
-      display: flex;
-      justify-content: flex-start;
-      padding-left: 30px;
-      width: 20%;
-      color: #F5E663;
-      padding-top: 50px;
-    }
-    .projects-grid {
-      display: flex;
-      flex-flow: row wrap;
       width: 80%;
       margin: auto;
-      justify-content: space-between;
+    }
+
+    /*--BEGIN PROJECTS SECTION--*/
+    #projects {
+      height: 250vh;
     }
     .project-tile {
-      flex: 0 0 400px;
-      margin-bottom: 40px;
-      padding: 30px;
-      width: 400px;
-      height: 300px;
-      background-color: #104F55;
+      width: 200px;
+      height: 200px;
+      background-color: #327469;
+      margin: auto;
+      border-radius: 5px;
       text-align: center;
+      padding: 25px 0 0 0;
     }
-    a img {
-      width: 400px;
-      height: auto;
-    }
-
-    a:link, a:visited {
-      color: #F5E663;
-      text-decoration: none;
-    }
-
-    a:hover, a:active {
-      color: #FFAD69;
-
-    }
-    .icon {
-      width: 24px;
-      height: auto;
-    }
-    #contacts-section {
-      height: 100vh;
-    }
-
-    #email-div {
-      color: #FFAD69;
-      margin-top: 100px;
-      margin-bottom: 100px;
-      width: 100%;
+    .project-title {
       text-align: center;
+      padding-bottom: 25px;
     }
 
+    #tileA {
+      background-image: url(https://i.ibb.co/NY92YMr/Screen-Shot-2021-03-16-at-3-26-02-PM.png);
+      background-size: cover;
+    }
+    #tileB {
+      background-image: url(https://i.ibb.co/FzjKyqT/Screen-Shot-2021-03-16-at-3-26-53-PM.png);
+      background-size: cover;
+      background-position: center center;
+    }
+
+    #tileC {
+      background-image: url(https://i.ibb.co/T2sBwcN/Screen-Shot-2021-03-16-at-3-27-18-PM.png);
+      background-size: cover;
+      background-position: left top;
+    }
+
+    #tileD {
+      background-image: url(https://i.ibb.co/Rvq48GY/Screen-Shot-2021-03-16-at-3-27-45-PM.png);
+      background-size: cover;
+      background-position: left top;
+    }
+
+    /*--CONTACTS SECTION--*/
     #icon-links {
       display: flex;
       flex-direction: row;
-      width: 30%;
+      width: 50%;
       margin: auto;
       justify-content: space-between;
+      padding-top: 60px;
     }
 
-    @media screen only and (max-width: 768px) {
-      
+    #contacts-section p {
+      text-align: center;
+      padding-top: 30px;
     }
-  </style>
+    }
+
+    /*--STYES FOR TABLETS--*/
+    @media only screen and (max-width: 767px) {
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 90px;
+    }
+    .dropdown-menu {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .nav-list {
+      display: flex;
+      justify-content: space-evenly;
+      padding-right: 50px;
+      list-style-type: none;
+      width: 500px;
+    }
+    .nav-link {
+      padding: 5px;
+    }
+      #menu-toggle {
+        display: none;
+      }
+      .dropdown-menu label {
+        display: none;
+      }
+      /*--WELCOME SECTION--*/
+    section::before {
+      display: block;
+      content: "";
+      margin-top: -100px;
+      height: 100px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #welcome-section {
+      width: 100%;
+      padding-top: 150px;
+      text-align: center;
+      color: #0D0221;
+    }
+    #welcome-text h1{
+      width: 90%;
+      font-size: 5em;
+    }
+    #welcome-text h3 {
+      width: 90%;
+      font-size: 3em;
+    }
+    /*--END WELCOME SECTION--*/
+
+     .section-heading {
+      font-size: 4em;
+      padding-left: 30px;
+    }
+
+    section {
+      padding-top: 50px;
+      width: 100%;
+      height: 110vh;
+    }
+    /*--BEGIN ABOUT SECTION --*/
+    #about-text {
+      width: 60%;
+      margin: auto;
+      line-height: 1.5;
+    }
+
+    /*--BEGIN PROJECTS SECTION--*/
+    #projects {
+      height: 250vh;
+    }
+    .projects-grid-row {
+      width: 60%;
+      margin: auto;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-evenly;
+    }
+    .project-tile {
+      width: 300px;
+      height: 300px;
+      background-color: #327469;
+      border-radius: 5px;
+      margin: 25px;
+    }
+    .project-title {
+      text-align: center;
+      padding-bottom: 25px;
+    }
+
+    #tileA {
+      background-image: url(https://i.ibb.co/NY92YMr/Screen-Shot-2021-03-16-at-3-26-02-PM.png);
+      background-size: cover;
+    }
+    #tileB {
+      background-image: url(https://i.ibb.co/FzjKyqT/Screen-Shot-2021-03-16-at-3-26-53-PM.png);
+      background-size: cover;
+      background-position: center center;
+    }
+
+    #tileC {
+      background-image: url(https://i.ibb.co/T2sBwcN/Screen-Shot-2021-03-16-at-3-27-18-PM.png);
+      background-size: cover;
+      background-position: left top;
+    }
+
+    #tileD {
+      background-image: url(https://i.ibb.co/Rvq48GY/Screen-Shot-2021-03-16-at-3-27-45-PM.png);
+      background-size: cover;
+      background-position: left top;
+    }
+
+    /*--CONTACTS SECTION--*/
+    #icon-links {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+      margin: auto;
+      justify-content: space-between;
+      padding-top: 60px;
+    }
+
+    #contacts-section p {
+      text-align: center;
+      padding-top: 30px;
+    }
+    }
+
+    /*--STYLES FOR DESKTOPS--*/
+    @media only screen and (min-width: 768px) {
+     #navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 90px;
+    }
+    .dropdown-menu {
+      width: auto;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 20px;
+    }
+    .nav-list {
+      display: flex;
+      justify-content: space-evenly;
+      padding-right: 50px;
+      list-style-type: none;
+      width: 500px;
+    }
+    .nav-link {
+      padding: 5px;
+      font-weight: 700;
+    }
+      #menu-toggle {
+        display: none;
+      }
+      .dropdown-menu label {
+        display: none;
+      }
+      /*--WELCOME SECTION--*/
+    section::before {
+      display: block;
+      content: "";
+      margin-top: -100px;
+      height: 100px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #welcome-section {
+      width: 100%;
+      padding-top: 150px;
+      text-align: center;
+      color: #0D0221;
+      height: 100vh;
+    }
+    #welcome-text h1{
+      width: 90%;
+      font-size: 5em;
+    }
+    #welcome-text h3 {
+      width: 90%;
+      font-size: 3em;
+    }
+    /*--END WELCOME SECTION--*/
+
+     .section-heading {
+      font-size: 4em;
+      padding-left: 50px;
+    }
+
+    section {
+      padding-top: 50px;
+      width: 100%;
+      height: 110vh;
+    }
+    /*--BEGIN ABOUT SECTION --*/
+    #about-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #about-section h3 {
+      margin-right: 60px;
+    }
+    #about-text {
+      width: 40%;
+      line-height: 1.5;
+    }
+
+    /*--BEGIN PROJECTS SECTION--*/
+    #projects {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    .projects-grid {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    .projects-grid-row {
+      display: flex;
+      flex-direction: row;
+      max-width: 50%;
+      justify-content: space-between;
+    }
+    .project-tile {
+      width: 300px;
+      height: 300px;
+      background-color: #327469;
+      border-radius: 5px;
+      margin: 10px;
+    }
+    .project-title {
+      text-align: center;
+      padding-bottom: 25px;
+    }
+
+    #tileA {
+      background-image: url(https://i.ibb.co/NY92YMr/Screen-Shot-2021-03-16-at-3-26-02-PM.png);
+      background-size: cover;
+    }
+    #tileB {
+      background-image: url(https://i.ibb.co/FzjKyqT/Screen-Shot-2021-03-16-at-3-26-53-PM.png);
+      background-size: cover;
+      background-position: center center;
+    }
+
+    #tileC {
+      background-image: url(https://i.ibb.co/T2sBwcN/Screen-Shot-2021-03-16-at-3-27-18-PM.png);
+      background-size: cover;
+      background-position: left top;
+    }
+
+    #tileD {
+      background-image: url(https://i.ibb.co/Rvq48GY/Screen-Shot-2021-03-16-at-3-27-45-PM.png);
+      background-size: cover;
+      background-position: left top;
+    }
+
+    /*--CONTACTS SECTION--*/
+    #icon-links {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+      margin: auto;
+      justify-content: space-between;
+      padding-top: 60px;
+    }
+
+    #contacts-section p {
+      text-align: center;
+      padding-top: 30px;
+    }
+    }
+</style>
 </head>
 <body>
-
 <!-- START NAV -->
   <nav id="navbar">
+    <div class="dropdown-menu">
+    <input type="checkbox" id="menu-toggle"></input>
+    <label for="menu-toggle">Menu</label>
     <ul class="nav-list">
       <li>
         <a class="nav-link" href="#welcome-section">Welcome</a>
@@ -177,6 +500,7 @@
         <a class="nav-link" href="#contacts-section">Contact</a>
       </li>
     </ul>
+    </div>
   </nav>
 <!-- END NAV -->
 
@@ -202,38 +526,33 @@
   <section id="projects">
     <h3 class="section-heading">My Projects</h3>
     <div class="projects-grid">
+    <div class="projects-grid-row">
       <a href="https://codepen.io/annecburke/full/XWNBVWG" target="_blank">
-        <div class="project-tile">
-        <img src="https://i.ibb.co/NY92YMr/Screen-Shot-2021-03-16-at-3-26-02-PM.png" id="tribute-page-img" class="project-image" alt="Tribute Page Image"/>
+        <div class="project-tile" id="tileA"></div>
         <p class="project-title">Tribute Page: Ludwig Zamenhof
         </p>
-      </div>
       </a>
 
       <a href="https://codepen.io/annecburke/full/xxRyzwG" target="_blank">
-        <div class="project-tile">
-          <img src="https://i.ibb.co/FzjKyqT/Screen-Shot-2021-03-16-at-3-26-53-PM.png" id="survey-page-img" class="project-image" alt="Survey Page Image"/>
+        <div class="project-tile" id="tileB"></div>
           <p class="project-title">Survey Page
           </p>
-        </div>
       </a>
-
+    </div>
+    <div class="projects-grid-row">
       <a href="https://codepen.io/annecburke/full/yLVQMop" target="_blank">
-        <div class="project-tile">
-          <img src="https://i.ibb.co/T2sBwcN/Screen-Shot-2021-03-16-at-3-27-18-PM.png" id="product-landing-img" class="project-image" alt="Product Landing Page Image"/>
+        <div class="project-tile" id="tileC"></div>
           <p class="project-title">Project Landing Page
           </p>
-        </div>
       </a>
 
       <a href="https://codepen.io/annecburke/full/eYBXYPN" target="_blank">
-        <div class="project-tile">
-          <img src="https://i.ibb.co/Rvq48GY/Screen-Shot-2021-03-16-at-3-27-45-PM.png" id="tech-doc-img" class="project-image" alt="Technical Documentation Page Image"/>
+        <div class="project-tile" id="tileD"></div>
           <p class="project-title">Technical Documentation Page
           </p>
-        </div>
       </a>
-
+    </div>
+    </div>
     </div>
   </section>
 <!-- END PROJECTS SECTION -->
@@ -241,18 +560,15 @@
 <!-- START CONTACT SECTION -->
   <section id="contacts-section">
     <h3 class="section-heading">Contact</h3>
-    <div id=email-div>
-      <p>
-        annechristineburke@gmail.com
-      </p>
-    </div>
+
     <div id="icon-links">
-      <a href="https://github.com/annecburke"><img class="icon" src="https://i.ibb.co/yQMtFNy/icons8-github-24.png" id="github-icon" alt="GitHub Icon" /></a>
+      <a id="profile-link" href="https://github.com/annecburke" target="_blank"><img class="icon" src="https://i.ibb.co/yQMtFNy/icons8-github-24.png" id="github-icon" alt="GitHub Icon" /></a>
 
       <a href="https://linkedin.com/anne-c-burke"><img class="icon" src="https://i.ibb.co/k96zXq9/icons8-linkedin-24.png" /></a>
 
       <a href="https://twitter.com/christeza"><img class="icon" src="https://i.ibb.co/vq1zr7n/icons8-twitter-24.png" /></a>
     </div>
+    <p>annechristineburke@gmail.com</p>
   </section>
 <!-- END CONTACT SECTION -->
 </body>
